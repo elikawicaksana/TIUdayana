@@ -1,0 +1,1450 @@
+@import url('https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Open+Sans&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.poppins-extralight {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+  
+.poppins-light {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+  
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+  
+.poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.navbar {
+    position: sticky;
+    top: 0; /* Position it at the top of the viewport */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to left, #3566C8, #5EAEDC);
+    padding: 20px 20px;
+    z-index: 10; /* Ensure the navbar stays on top of other elements */
+}
+
+.logo-title {
+    display: flex; /* Align logo and title horizontally */
+    align-items: center; /* Vertically align logo and title */
+    margin-left: 15px;
+}
+
+.logo-title h3 {
+    color: white;
+    margin: 0;
+    font-size: 17px;
+    text-align: left;
+    display: inline-block; /* Ensure it doesn't break the layout */
+    letter-spacing: 0.03em;
+}
+
+.logo-title h3 .teknologi {
+    display: block;
+    margin-bottom: -25px; /* Add space below "TEKNOLOGI" */
+}
+
+.logo-title h3 .informasi {
+    display: block;
+}
+
+.logo-title img {
+    height: 50px;
+    margin-right: 10px; /* Space between logo and title */
+}
+
+.navbar ul {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Flexbox for horizontal alignment */
+    justify-content: center; /* Center the <li> items horizontally */
+    align-items: center; /* Align items vertically in the navbar */
+    margin: 0 auto; /* Center the ul within the navbar */
+    padding: 0; /* Reset padding */
+}
+
+.navbar ul li {
+    margin: 0 10px;
+    position: relative; /* Position for dropdowns */
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.navbar a:hover {
+    color: #FFD700;
+}
+
+.navbar .dropdown .dropbtn {
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.navbar .dropdown:hover .dropbtn {
+    color: #FFD700; /* Change color when hovering */
+}
+
+.navbar .dropdown-content {
+    display: none; /* Hide the dropdown content by default */
+    position: absolute;
+    background: linear-gradient(to right, rgba(53, 102, 200, 0.55), rgba(94, 174, 220, 0.55)); /* Transparent gradient */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.navbar .dropdown:hover .dropdown-content {
+    display: block; /* Show the dropdown when hovering over the parent */
+}
+
+.navbar .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-weight: 500;
+}
+
+.navbar .dropdown-content a:hover {
+    background: linear-gradient(to left, rgba(53, 102, 200, 0.55), rgba(94, 174, 220, 0.55));
+}
+
+.social-media {
+    display: flex;
+    margin-right: 15px;
+    align-items: center;
+}
+
+.social-media a {
+    color: white;
+    margin-left: 20px;
+    font-size: 30px;
+}
+
+/* Styling for hero section */
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-bottom: 0;
+    overflow: hidden;
+    margin-bottom: -7px;
+}
+
+.hero img {
+    width: 100%; /* Adjust the percentage to make the image smaller */
+    height: auto;
+    object-fit: cover;
+    margin: 0;
+    -webkit-object-fit: cover; /* Vendor prefix for Safari/Opera */
+    object-position: center;  /* Center image in case of cropping */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3); /* Semi-transparent black overlay */
+    z-index: 1;
+}
+
+.hero-text {
+    position: absolute;
+    left: 50%;
+    z-index: 2;
+    top: 50%;
+    transform: translate(-50%, -50%); 
+    /* bottom: 150px; 
+    transform: translateX(-50%);  */
+}
+
+.hero-text h1 {
+    font-size: 3.5em;
+    margin: 0;
+}
+
+.hero-text p {
+    font-size: 2em;
+    margin-top: -15px;
+    margin-bottom: 15px;
+}
+
+.hero-text button {
+    color: white;
+    background: linear-gradient(to left, #3566C8, #5EAEDC);
+    background-size: 200% 100%; /* Make the gradient larger than the element */
+    padding: 10px 50px;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+    transition: background-position 0.5s ease; /* Smooth transition for background position */
+    font-weight: 600;
+}
+
+.hero-text button:hover {
+    background-position: -100% 0; /* Move the gradient to the left on hover */
+}
+
+.gradient-bar {
+    width: 100%;
+    height: 45px;  /* Make the gradient bar smaller */
+    background: linear-gradient(to left, #3566C8, #5EAEDC);
+    margin: 0;  /* Ensure there is no margin around it */
+    padding: 0;
+} 
+
+/* Styling for Visi Content */
+.visi-content {
+    background-color: #f9f9f9; /* Optional: Light background color for separation */
+    padding: 50px 20px;
+    text-align: center;
+    margin-bottom: 30px; /* Space between this div and the next */
+    border-radius: 10px; /* Optional: Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for effect */
+}
+
+.visi-section {
+    margin-top: -50px;
+    text-align: center;
+    padding: 50px 20px;
+    position: relative;  /* Container to position the decorative lines relative to it */
+}
+
+.visi-section h1 {
+    color: #54ADFF;
+    font-size: 3.5em;
+    margin-bottom: -5px;
+}
+
+.visi-section .button {
+    background: linear-gradient(to left, #3566C8, #5EAEDC);
+    color: white;
+    padding: 5px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 1.5em;
+    margin-bottom: 50px;
+}
+
+.logo-container {
+    text-align: center;  /* Center the logo */
+    margin-bottom: 30px;
+}
+
+.logo-hmti {
+    display: block;
+    margin: 0 auto;
+    width: 280px;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
+.visi-section p {
+    font-size: 1.2em;
+    color: #44546A;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+.decorative-lines {
+    position: absolute;
+    top: 50%;  /* Vertically center the lines */
+    left: 0;
+    right: 0;
+    width: 100%;
+    transform: translateY(-50%); /* Center the lines vertically */
+    display: flex;
+    justify-content: space-between; /* Spread lines across the width of the screen */
+    pointer-events: none; /* Prevent interaction with the lines */
+}
+
+.decorative-lines img {
+    max-width:350px; /* Set a maximum width for the image */
+    width: 100%;      /* Make sure the image can resize within the container */
+    height: auto;     /* Maintain the aspect ratio */
+}
+
+/* Styling for accreditation section */
+.accre-section {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-bottom: 0;
+    overflow: hidden;
+}
+
+.accre-section img {
+    width: 100%; /* Adjust the percentage to make the image smaller */
+    height: auto;
+    object-fit: cover;
+    margin: 0;
+    -webkit-object-fit: cover; /* Vendor prefix for Safari/Opera */
+    object-position: center;  /* Center image in case of cropping */
+}
+
+.accre-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to left, rgba(53, 102, 200, 0.7), rgba(94, 174, 220, 0.7));
+    z-index: 1;
+}
+
+.accre-section-text {
+    position: absolute;
+    top: 20px; /* Position near the top of the section */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center; /* Center text and logo */
+    z-index: 2;
+}
+
+.accre-section-text h1 {
+    font-size: 4.5em;
+    font-weight: 800;
+    margin: 0;
+    padding: 0;
+}
+
+.accre-section-text h2 {
+    font-size: 3em;
+    margin: 0;
+    padding: 0;
+    margin-top: -25px; /* Optional: fine-tune spacing */
+}
+
+.accre-section-logo {
+    margin-top: -35px; /* Space between h2 and logo */
+}
+
+.accre-section-logo img {
+    width: 370px; /* Adjust size of the logo */
+    height: auto;
+    display: inline-block;
+}
+
+/* Styling for academic section */
+.academic-section {
+    position: relative;
+    text-align: center;
+    color: #3566C8;
+    margin-bottom: 0;
+    overflow: hidden;
+    margin-bottom: -7px;
+}
+
+.academic-section h1 {
+    font-size: 4.5em;
+    margin-bottom: -5px;
+    font-weight: 600;
+}
+
+.academic-section p {
+    font-size: 1.4em;
+    color: black;
+    margin-top: 20px;
+}
+
+.academic-box-container {
+    display: flex;
+    justify-content: center; /* Center the boxes horizontally */
+    gap: 100px; /* Space between boxes */
+    margin-top: 30px;
+}
+
+.academic-box-item {
+    text-align: center;
+    width: 250px; /* Increased box width */
+}
+
+.academic-box {
+    background: linear-gradient(to top, #3566C8, #5EAEDC);
+    padding: 60px; /* Increased padding for larger content space */
+    height: 200px; /* Increased height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.academic-box img {
+    max-width: 100%; /* Allow the image to take the full width of the box */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure the image fits well within the box */
+}
+
+.academic-box-item h2 {
+    font-size: 1.8em; /* Slightly larger text for bigger boxes */
+    color: #3566C8;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.academic-box-item p {
+    font-size: 1.1em; /* Slightly larger text for description */
+    color: black;
+    margin-top: 5px;
+}
+
+/* Styling for info section */
+.info-section {
+    margin-top: 70px;
+    background-color: #3566C8; /* Set background color for the entire section */
+    color: white;
+    height: 350px;
+}
+
+.info-title {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.info-title h1 {
+    font-size: 2.5em;
+}
+
+.stats {
+    margin-top: -50px;
+    display: flex;
+    justify-content: center; /* Center the items */
+    padding: 20px 0;
+}
+
+.stat-item {
+    display: flex; /* Use flexbox for stat items */
+    flex-direction: row; /* Align items in a row */
+    align-items: center; /* Center items vertically */
+    text-align: center;
+    margin: 0 30px; /* Add horizontal margin to control spacing */
+}
+
+.stat-item h2 {
+    margin: 0;
+    font-size: 5.5em;
+    margin-right: 10px; /* Add some space between h2 and p */
+    font-weight: 400;
+}
+
+.stat-item p {
+    margin: 0;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+/* Styling for facilities section */
+.facilities-section {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.facilities-title {
+    font-size: 2.3em;
+    margin-bottom: 20px;
+    color: #3566C8;
+    font-weight: 600;
+    margin-bottom: 50px;    
+}
+
+.image-facilities {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.image-box {
+    position: relative;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.image-box img {
+    width: 575px;
+    height: 355px;
+}
+
+.image-caption {
+    position: absolute; /* Keep it absolute */
+    bottom: 0; /* Position it at the bottom of the image */
+    left: 0; /* Align to the left */
+    width: 555px;
+    height: 50%; /* Set height to cover the bottom half */
+    color: white;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)); /* Gradient from black to transparent */
+    padding: 10px; /* Add padding for better appearance */
+    font-weight: 600;
+    font-size: 1.4em;
+    text-align: left; /* Align text to the left */
+    display: flex; align-items: flex-end; /* Align items to the bottom */
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%; /* Width of the enlarged image */
+    max-width: 700px; /* Max width */
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Styling for news section */
+.news-section {
+    margin-top: 70px;
+}
+
+.news-title {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 80px; 
+    background: linear-gradient(to right, #3566C8, #5EAEDC);
+    width: 100%; 
+    margin: 0 auto; 
+}
+
+.news-title h1 {
+    color: white;
+    margin: 0; /* Remove margin to center vertically */
+    font-size: 2.5em;
+}
+
+/* Styling for news boxes */
+.news-boxes {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center;
+    margin-top: 70px; /* Reduce margin above and below */
+}
+
+.news-box {
+    padding: 15px; /* Padding inside boxes */
+    width: 25%; /* Adjust width if necessary */
+    text-align: left; /* Align text to the left */
+}
+
+.news-image {
+    width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Styling for text outside the boxes */
+.news-date {
+    font-size: 1em; /* Smaller font for date */
+    color: black;
+    margin: 5px 0; /* Margin for spacing */
+}
+
+.news-title-box {
+    font-size: 1.5em; /* Font size for box title */
+    margin: 10px 0 5px; /* Margin for spacing */
+    font-weight: 600;
+}
+
+.news-desc {
+    font-size: 1em; /* Font size for description */
+    color: #44546A; /* Darker color for description */
+    margin: 0; /* Remove margin */
+}
+
+/* Styling for announcement section */
+.announcement-section {
+    margin-top: 70px;
+}
+
+.announcement-title {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 80px; 
+    background: linear-gradient(to right, #3566C8, #5EAEDC);
+    width: 100%; 
+    margin: 0 auto; 
+    margin-bottom: 70px;
+}
+
+.announcement-title h1 {
+    color: white;
+    margin: 0; /* Remove margin to center vertically */
+    font-size: 2.5em;
+}
+
+.announcement-item {
+    margin-left: 70px;
+    display: flex;
+    margin-bottom: 20px;
+}
+.announcement-item img {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+.announcement-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.announce-content-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: -10px;
+    margin-top: 0;
+}
+
+.announce-content-title a{
+    color: black;
+}
+.announcement-date {
+    font-size: 14px;
+    color: #888;
+    display: flex;
+    align-items: center;
+}
+.announcement-date i {
+    margin-right: 5px;
+}
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+    .announcement-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .announcement-item img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+}
+
+/* Styling for footer */
+.footer {
+    margin-top: 70px;
+    display: flex; /* Use flexbox for the footer */
+    flex-direction: column; /* Stack top and content sections vertically */
+    align-items: center; /* Center items horizontally */
+    padding: 20px; /* Add some padding */
+    background: linear-gradient(to right, #3566C8, #5EAEDC);
+    color: white; /* Text color */
+}
+
+.top-section {
+    display: flex; /* Use flexbox for the top section */
+    justify-content: space-between; /* Space between logo and social icons */
+    width: 100%; /* Full width */
+    max-width: 1200px; /* Optional: limit max width */
+    align-items: center; /* Center items vertically */
+}
+
+.footer-content {
+    display: flex; /* Use flexbox for left and right sections */
+    justify-content: center; /* Center horizontally */
+    width: 100%; /* Full width */
+    max-width: 1200px; /* Optional: limit max width */
+    padding-bottom: 50px;
+}
+
+.left-section {
+    flex: 1; /* Allow both sections to take equal space */
+    min-width: 300px; /* Minimum width for responsiveness */
+    margin: 10px; /* Margin around sections */
+    margin-bottom: 0; /* Remove bottom margin to bring it closer to the right section */
+}
+
+.right-section {
+    display: flex; /* Use flexbox for the right section */
+    flex-direction: column; /* Stack contact info vertically */
+    margin-left: 20px; /* Add left margin to create space from the left section */
+}
+
+.left-section img {
+    width: 100%;
+    max-width: 450px;
+    border: 1px solid #ccc;
+}
+
+.left-section h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    display: flex; /* Use flexbox for contact sections */
+    justify-content: space-between; /* Space between Hubungi Kami and Informasi */
+    flex: 1; /* Allow contact info to grow */
+}
+
+.contact-info div {
+    flex: 1; /* Allow both contact sections to take equal space */
+    margin: 10px; /* Margin around sections */
+}
+
+.contact-info div:first-child {
+    margin-left: 30px;
+}
+
+.contact-info div:last-child {
+    margin-left: 70px; /* Add left margin to the Informasi section */
+}
+
+.right-section p {
+    margin: 5px 0;
+}
+
+.right-section ul {
+    list-style-type: disc; /* Use bullet points */
+    padding-left: 20px; /* Indent the list */
+    margin: 0; /* Remove default margin */
+}
+
+.right-section li {
+    margin: 0; /* Remove margin between list items */
+}
+
+.right-section a {
+    color: white; /* Keep the link color consistent */
+    text-decoration: none; /* Remove underline */
+}
+
+.right-section a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-end; /* Align social icons to the right */
+    align-items: center;
+}
+
+.social-icons a {
+    color: white;
+    margin-left: 20px;
+    font-size: 45px;
+}
+
+
+/* Styling for profil page */
+/* Styling for hero section */
+.hero-profil {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-bottom: -10px;
+    overflow: hidden;
+}
+
+.hero-profil img {
+    width: 100%; /* Keep the width at 100% of the container */
+    height: auto; /* Set a specific height */
+    object-fit: cover; /* Ensure the image covers the area */
+    margin: 0;
+    -webkit-object-fit: cover; /* Vendor prefix for Safari/Opera */
+    object-position: center; /* Center image in case of cropping */
+}
+
+.hero-profil-text {
+    position: absolute;
+    left: 50%;
+    z-index: 2;
+    top: 40%;
+    transform: translate(-50%, -50%); 
+    /* bottom: 150px; 
+    transform: translateX(-50%);  */
+}
+
+.hero-profil-text h1 {
+    font-size: 3.5em;
+    margin: 0;
+}
+
+.hero-profil-text p {
+    font-size: 2em;
+    margin-bottom: -10px;
+}
+
+.hero-profil-text button {
+    color: white;
+    background: linear-gradient(to left, #3566C8, #5EAEDC);
+    background-size: 200% 100%; /* Make the gradient larger than the element */
+    padding: 10px 50px;
+    font-size: 0.9em;
+    border: none;
+    transition: background-position 0.5s ease; /* Smooth transition for background position */
+    font-weight: 600;
+}
+
+/* Styling for history section */
+.history-section {
+    display: flex; /* Use flexbox to control layout */
+    align-items: center; /* Vertically align items in the section */
+    justify-content: space-between; /* Push content to opposite ends */
+    padding: 25px;
+    max-width: 1200px;
+    margin: 40px auto; /* Center the section horizontally with space at the top */
+    position: relative;
+}
+
+.image-history {
+    position: relative; /* Establish a stacking context for pseudo-elements */
+    margin-right: 20px;
+}
+
+.image-history img {
+    width: 100%;
+    max-width: 470px;
+    height: auto;
+    -webkit-box-shadow: 10px 10px 15px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 15px -10px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 15px -10px rgba(0,0,0,0.75);
+    position: relative; /* Ensure it is positioned above the pseudo-elements */
+    z-index: 2; /* Higher z-index to place it above the shapes */
+}
+
+.image-history::before {
+    content: '';
+    position: absolute;
+    top: -25px; /* Adjust position as needed */
+    left: -25px; /* Adjust position as needed */
+    width: 100px; /* Square size */
+    height: 100px; /* Square size */
+    background: linear-gradient(to right, #3566C8, #5EAEDC);
+    z-index: 1; /* Place it behind the image */
+}
+
+.image-history::after {
+    content: '';
+    position: absolute;
+    bottom: -30px; /* Adjust position as needed */
+    right: -35px; /* Adjust position as needed */
+    width: 385px; /* Rectangle width */
+    height: 100px; /* Rectangle height */
+    background: linear-gradient(to right, #3566C8, #5EAEDC);
+    z-index: 1; /* Place it behind the image */
+}
+
+
+.text-history {
+    max-width: 600px; /* Limit the width of the text container */
+    text-align: center; /* Center-align text within this container */
+    margin-left: auto; /* Push the `.text-history` section to the right */
+    padding: 10px;
+}
+
+.text-history h1 {
+    font-size: 2.5rem;
+    color: #3566C8;
+    margin: 0;
+    font-weight: 600;
+}
+
+.text-history h2 {
+    font-size: 1.5rem;
+    color: black;
+    margin-top: -10px;
+    font-weight: 600;
+}
+
+.text-history p {
+    font-size: 1rem;
+    color: black;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .history-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .image-history {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+.vision-section {
+    text-align: center;
+    padding: 50px 25px;
+    position: relative;  /* Container to position the decorative lines relative to it */
+}
+
+.vision-section h1 {
+    color: #54ADFF;
+    font-size: 3.5em;
+    margin-bottom: -5px;
+}
+
+.vision-section p {
+    font-size: 1.2em;
+    color: black;
+    margin-top: 20px;
+    width: 70%;  /* Limit the width to 70% of the parent container */
+    margin-left: auto;  /* Center the paragraph */
+    margin-right: auto; /* Center the paragraph */
+    line-height: 1.6;  /* Add line height for readability */
+}
+
+
+/* Styling for misi section */
+.misi-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f0f7fa;
+    padding-bottom: 120px;
+}
+
+.misi-section h1 {
+    color: #54ADFF;
+    font-size: 3.5em;
+}
+
+.misi-cards {
+    display: flex;
+    justify-content: center; /* Centers all cards */
+    gap: 30px; /* Spacing between cards */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    gap: 50px;
+}
+
+.misi-card {
+    flex: 1 1 300px; /* Flexible size, minimum width of 300px */
+    max-width: 300px; /* Limit card width */
+    text-align: center;
+    padding: 20px;
+    background: #f9f9f9; /* Optional: light gray background */
+    -webkit-box-shadow: 30px 30px 31px -20px rgba(222,222,222,1);
+    -moz-box-shadow: 30px 30px 31px -20px rgba(222,222,222,1);
+    box-shadow: 30px 30px 31px -20px rgba(222,222,222,1);
+}
+
+.misi-card img {
+    width: 50px; /* Icon size */
+    height: 50px;
+    margin-bottom: 20px; /* Space between icon and text */
+}
+
+.misi-card p {
+    font-size: 1rem;
+    color: black;
+    line-height: 1.6;
+}
+
+/* Styling for goals section */
+.goals-section {
+    text-align: center;
+    padding: 50px 20px;
+    position: relative;  /* Container to position the decorative lines relative to it */
+}
+
+.goals-section h1 {
+    color: #54ADFF;
+    font-size: 3.5em;
+}
+
+.goals-section ul {
+    list-style-type: decimal;  /* Use numbers instead of bullets */
+    padding-left: 40px;  /* Indentation for list items */
+    text-align: left;  /* Align the text to the left */
+    margin-top: 20px;
+    width: 70%;  /* Limit the width to 70% of the parent container */
+    margin-left: auto;  /* Center the list */
+    margin-right: auto; /* Center the list */
+}
+
+.goals-section li {
+    font-size: 1.2em;
+    color: black;
+    line-height: 1.6;  /* Add line height for readability */
+    margin-bottom: 10px;  /* Space between list items */
+}
+
+.element-lines {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    transform: translateY(-50%); /* Center the lines vertically */
+    display: flex;
+    justify-content: space-between; /* Spread lines across the width of the screen */
+    pointer-events: none; /* Prevent interaction with the lines */
+}
+
+.element-lines img {
+    max-width: 200px; /* Reduce the maximum width */
+    width: auto;      /* Allow the image to resize based on its aspect ratio */
+    height: auto;     /* Maintain the aspect ratio */
+}
+
+/* Styling for curriculum section */
+.curriculum-section {
+    position: relative;
+    margin-top: 200px;
+    margin-bottom: 0;
+    overflow: hidden;
+}
+
+.curriculum-section img {
+    width: 100%; /* Adjust the percentage to make the image smaller */
+    height: auto;
+    object-fit: cover;
+    margin: 0;
+    -webkit-object-fit: cover; /* Vendor prefix for Safari/Opera */
+    object-position: center;  /* Center image in case of cropping */
+}
+
+.curriculum-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to left, rgba(53, 102, 200, 0.7), rgba(94, 174, 220, 0.7));
+    z-index: 1;
+}
+
+.curriculum-section-text {
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+    position: absolute;
+    top: 50%;  /* Center vertically */
+    left: 50%;
+    transform: translate(-50%, -50%);  /* Center the text both horizontally and vertically */
+    text-align: center;  /* Center the text */
+    z-index: 2;
+}
+
+.curriculum-section-text h1 {
+    font-size: 4em;
+    font-weight: 400;
+    padding: 0;
+    margin-top: -25px;
+}
+
+.curriculum-section-text h2 {
+    font-size: 3em;
+    margin: 0;
+    padding: 0;
+}
+
+.curriculum-boxes {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 100px 40px; /* Increased padding */
+    margin-bottom: -70px;
+    background-color: rgb(236, 236, 236);
+}
+
+.curriculum-box {
+    background-color: white; /* White background for each box */
+    width: 315px; /* Set a consistent width */
+    text-align: left;
+    padding: 0; /* Remove inner padding for alignment */
+    overflow: hidden; /* Ensure no overflow from child elements */
+    -webkit-box-shadow: 10px 10px 5px -5px rgba(209,209,209,1);
+    -moz-box-shadow: 10px 10px 5px -5px rgba(209,209,209,1);
+    box-shadow: 10px 10px 5px -5px rgba(209,209,209,1);
+}
+
+.image-container {
+    width: 100%;
+    height: 185px; /* Fixed height for the image header */
+    overflow: hidden; /* Prevent the image from overflowing */
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Make the image fill the container */
+}
+
+.curriculum-box h3 {
+    font-size: 1.4em;
+    color: black;
+    margin: 15px 20px 10px; /* Add spacing around text */
+    font-weight: 500;
+}
+
+.curriculum-box p {
+    font-size: 1rem;
+    color: #44546A;
+    line-height: 1.5;
+    margin: 0 20px 20px; /* Add spacing below the paragraph */
+}
+
+
+/* Styling for kemahasiswaan page */
+/* Styling for header title */
+.header-title {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 80px; 
+    background: linear-gradient(to right, #3566C8, #5EAEDC);
+    width: 100%; 
+    margin: 0 auto; 
+}
+
+.header-title h1 {
+    color: white;
+    margin: 0; /* Remove margin to center vertically */
+    font-size: 2em;
+    font-weight: 400;
+}
+
+.gallery-section {
+    margin: 100px auto; /* Top and bottom margin, auto for horizontal centering */
+    text-align: center;
+    padding: 20px;
+    max-width: 1150px;
+    width: 100%;
+}
+
+.image-gallery {
+    width: 100%; /* Full container width */
+    height: auto; /* Adjust height dynamically */
+    position: relative; /* Keeps arrows positioned correctly */
+    display: flex;
+    justify-content: center; /* Centers the image horizontally */
+    align-items: center; /* Centers the image vertically */
+    padding: 0 70px; /* Add space for the arrows */
+    box-sizing: border-box;
+}
+
+.image-gallery img {
+    max-width: 850px;
+    width: 100%; /* Ensures the image fills the container width */
+    height: auto; /* Adjusts height proportionally */
+    object-fit: contain; /* Keeps the full aspect ratio without cropping */
+    background: white;
+    padding: 35px;
+    box-shadow: 0px 0px 5px 5px rgba(145,145,145,1);
+}
+
+.image-gallery .arrow {
+    position: absolute;
+    top: 27%; /* Center vertically */
+    transform: translateY(-50%); /* Align precisely */
+    background-color: transparent;
+    border: 5px solid rgb(37, 80, 165);
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(37, 80, 165);
+}
+
+.image-gallery .arrow.left {
+    font-size: 2em;
+    left: 0px; /* Position outside the image on the left */
+}
+
+.image-gallery .arrow.right {
+    font-size: 2em;
+    right: 0px; /* Position outside the image on the right */
+}
+
+/* Hide all slides except the active one */
+.image-gallery .slide {
+    display: none;
+}
+
+/* Show only the active slide */
+.image-gallery .slide.active {
+    display: block;
+}
+
+.text-container {
+    max-width: 770px;
+    width: 100%;
+    margin: auto;
+    text-align: center; /* Center the text */
+}
+
+.text-container h1 {
+    color: #3566C8;
+    margin: 0;
+    font-size: 3.5em;
+}
+.text-container h4 {
+    color: black;
+    font-style: italic;
+    margin-top: -10px;
+    font-weight: 600;
+    margin-bottom: 45px;
+}
+.text-container p {
+    color:rgb(0, 0, 0);
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+/* Styling for announcement section */
+.desc-section {
+    margin-top: 120px;
+    width: 90%; /* Set a width for the section (you can adjust this value) */
+    margin-left: auto;
+    margin-right: auto; /* Centers the section horizontally */
+}
+
+.desc-item {
+    position: relative; /* Required to position the overlay correctly */
+    margin-left: 70px;
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.desc-item img {
+    width: 420px;
+    height: 270px;
+    object-fit: cover;
+    margin-right: 50px;
+    position: relative; /* Keep the image relative for overlay positioning */
+}
+
+/* Create the overlay */
+.desc-item::after {
+    content: ""; /* Required for pseudo-element */
+    position: absolute;
+    bottom: 0; /* Position the overlay at the bottom */
+    left: 0;
+    width: 420px;
+    height: 70%; /* Set the height to cover the bottom half */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0)); /* Transparent gradient */
+}
+
+/* Optional: To prevent text from overlapping with the overlay */
+.desc-content {
+    position: relative;
+    z-index: 1;
+}
+
+.desc-content-title {
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-bottom: -10px;
+    margin-top: 0;
+}
+.desc-date {
+    font-size: 1em;
+    color: #888;
+    display: flex;
+    align-items: center;
+    max-width: 650px;
+}
+.desc-date i {
+    margin-right: 5px;
+}
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+    .desc-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .desc-item img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+}
+
+/* Styling for contact page */
+/* General Styling */
+.contact-bg {
+    background-color:rgba(217, 217, 217, 0.59);
+    padding-top: 30px;
+    padding-bottom: 110px;
+}
+.contact-section {
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 50px;
+    width: 100%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto; /* Centers the section horizontally */
+}
+.contact-item, .contact-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 7px;
+}
+.contact-item {
+    width: 300px;
+}
+
+.contact-item div {
+    display: flex;
+    align-items: flex-start; /* Align content to the top */
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+
+.contact-item div i {
+    margin-top: 10px;
+    font-size: 27px;
+    margin-right: 35px; /* Space between icon and text */
+    color: rgb(47, 90, 177);
+}
+
+.contact-item div .text-content {
+    display: flex;
+    flex-direction: column; /* Stack h3 and p vertically */
+}
+
+.contact-item div h3 {
+    margin: 0 0 5px 0; /* Add a small margin below h3 */
+    font-weight: 600;
+    font-size: 1em;
+}
+
+.contact-item div p {
+    font-size: 0.9em;
+    margin: 0; /* Remove default margins for p */
+    color: rgb(172, 172, 172); /* Optional: make p text color lighter */
+}
+
+.contact-form {
+    padding-right: 35px;
+    padding-left: 35px;
+    padding-top: 25px;
+    padding-bottom: 35px;
+    flex: 1;
+}
+.contact-form h2 {
+    font-size: 1.7em;
+    margin-top: 0;
+    font-weight: 600;
+}
+.contact-form p {
+    margin-top: -20px;
+    color:rgb(172, 172, 172);
+    font-size: 0.8em;
+}
+.contact-form form {
+    margin-top: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.contact-form form .form-group {
+    flex: 1 1 35%;
+}
+.contact-form form .form-group.full-width {
+    flex: 1 1 100%;
+}
+.contact-form form input, .contact-form form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 0.8em;
+}
+.contact-form form button {
+    padding: 10px 30px;
+    background: linear-gradient(to left, #3566C8, #5EAEDC); 
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.contact-form form button:hover {
+    background: linear-gradient(to right, #3566C8, #5EAEDC); 
+}
+.map-section {
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 35px;
+    width: 100%;
+}
+.map-section h1 {
+    margin-top: 0;
+    font-size: 2.5em;
+    font-weight: 600;
+
+}
+.map-section p {
+    margin-right: auto;
+    margin-left: auto;
+    color:rgb(172, 172, 172);
+    max-width: 900px;
+
+}
+.map-section img {
+    margin-top: 45px;
+    max-width: 100%;
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact-form form .form-group {
+        flex: 1 1 100%;
+    }
+}
